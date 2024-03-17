@@ -3,25 +3,25 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('top');
+    return view('lesson.index');
 });
 
 Route::get('/list', function () {
-    return view('class-list');
+    return view('number_of_lesson.index');
 });
 
 Route::get('/list/{classId}', function () {
-    return view('class');
+    return view('number_of_lesson.lesson');
 });
 
 Route::get('/list/{classId}/{participantId}', function () {
-    return view('create-participant');
+    return view('participant.create');
 });
 Route::post('/list/{classId}/{participantId}', function () {
-    return view('create-participant');
+    return view('participant.create');
 });
 Route::delete('/list/{classId}/{participantId}', function () {
-    return view('create-participant');
+    return view('participant.create');
 });
 
 Route::get('/setting', function () {
