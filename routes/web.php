@@ -10,8 +10,18 @@ Route::get('/list', function () {
     return view('class-list');
 });
 
-Route::get('/list/{id}', function () {
+Route::get('/list/{classId}', function () {
     return view('class');
+});
+
+Route::get('/list/{classId}/{participantId}', function () {
+    return view('create-participant');
+});
+Route::post('/list/{classId}/{participantId}', function () {
+    return view('create-participant');
+});
+Route::delete('/list/{classId}/{participantId}', function () {
+    return view('create-participant');
 });
 
 Route::get('/setting', function () {

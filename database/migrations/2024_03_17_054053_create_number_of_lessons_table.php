@@ -16,7 +16,7 @@ return new class extends Migration
             $table->bigInteger('class_id')->comment('教室ID');
             $table->bigInteger('participants_id')->comment('参加者ID');
             $table->string('lesson_title')->comment('開催タイトル');
-            $table->smallInteger('is_payment')->comment('支払有無');
+            $table->boolean('is_payment')->comment('支払有無');
             $table->timestamps();
         });
     }

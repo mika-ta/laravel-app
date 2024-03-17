@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('classes', function (Blueprint $table) {
+        Schema::create('lessons', function (Blueprint $table) {
             $table->id();
-            $table->string('class_title')->comment('教室名');
-            $table->smallInteger('is_payment')->nullable()->comment('参加費用の有無');
+            $table->string('lesson_title')->comment('教室名');
+            $table->boolean('is_payment')->nullable()->comment('参加費用の有無');
             $table->timestamps();
         });
     }
@@ -24,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('classes');
+        Schema::dropIfExists('lessons');
     }
 };
